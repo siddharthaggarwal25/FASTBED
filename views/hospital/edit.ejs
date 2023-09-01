@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">Edit Hospital Details</h1>
+        <div class="col-6 offset-3">
+            <form action="/user/hospital/show/<%= hospital._id%>/edit" method="POST" novalidate class="validated-form">
+            
+                <div class="mb-3">
+                    <label class="form-label" for="name">Name of institue</label>
+                    <input class="form-control" type="text" id="name" name="name" required value="<%= hospital.name  %>">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="phoneNo">Contact No.</label>
+                    <input class="form-control" type="number" id="phoneNo" name="phoneNo" required  value="<%= hospital.phoneNo  %>">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email ID</label>
+                    <input class="form-control" type="email" id="email" name="email" required value="<%= hospital.email  %>">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="address">Address</label>
+                    <input class="form-control" type="text" id="address" name="address" required value="<%= hospital.address  %>">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="beds">Total Beds</label>
+                    <input class="form-control" type="number" id="beds" name="beds" required  value="<%= hospital.beds  %>">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="about">About</label>
+                    <textarea class="form-control" id="about" name="about" required ><%= hospital.about  %></textarea>
+                </div>
+                
+                
+                <button class="btn btn-success">SUBMIT</button>
+
+            </form>
+    
+        </div>
+    </div>
+

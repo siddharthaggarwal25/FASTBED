@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate')%>
+    <% for(let h of hosp){ %>
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-4">                        
+                     <img class="img-fluid" src=<%= h.images[0].url%>>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= h.name %>
+                        </h5>
+                        <p class="card-text">
+                            <%= h.address %>
+                        </p>
+                        <p class="card-text">
+                            <%= h.email %>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <%= h.phoneNo%>
+                            </small>
+                        </p>
+                        <a href="/user/hospital/show/<%= h._id%>" class="btn btn-primary">View Hospital</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } %>
